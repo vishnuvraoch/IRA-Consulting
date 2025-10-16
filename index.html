@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IRA Consulting | Explore. Explain. Learn. Repeat.</title>
+  <meta name="description" content="IRA Consulting helps startups and SMEs fix bottlenecks, expand to India, adopt AI and sustainability practices. 3‑week pilot – £499." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;           /* Deep navy */
+      --card:#121833;         /* Card surface */
+      --muted:#9aa4c7;        /* Muted text */
+      --text:#e8ecff;         /* Primary text */
+      --brand:#6cf0c2;        /* Mint accent */
+      --brand-2:#7aa2ff;      /* Blue accent */
+      --warning:#ffd166;      /* Highlight */
+      --success:#6ee7a8;
+      --danger:#ff7b7b;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --shadow-soft:0 6px 16px rgba(0,0,0,.25);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1020 0%, #0b1020 40%, #0d1326 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;}
+    a{color:var(--brand)}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(11,16,32,.65);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.4px}
+    .logo-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow-soft)}
+    .nav a{color:var(--text);text-decoration:none;opacity:.9}
+    .nav-links{display:flex;gap:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.12);color:var(--text);text-decoration:none;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));box-shadow:var(--shadow-soft)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.brand{background:linear-gradient(135deg,var(--brand-2),var(--brand));color:#0b1020;border:none;font-weight:700}
+    .hero{padding:72px 0 40px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center}
+    .badge{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,.12);padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);font-size:12px;color:var(--muted)}
+    h1{font-size:44px;line-height:1.1;margin:14px 0 14px}
+    p.lead{font-size:18px;color:#c7d1ff;margin:0 0 22px}
+    .hero-card{background:linear-gradient(180deg,#121833,#0f1530);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .hero-card h3{margin:0 0 10px}
+    .list{display:grid;gap:10px;margin:12px 0}
+    .list .row{display:flex;gap:10px;align-items:flex-start}
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--brand);margin-top:8px}
+    section{padding:64px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    h2{font-size:28px;margin:0 0 10px}
+    .muted{color:var(--muted)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,#111735,#0e1430);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-soft)}
+    .icon{width:22px;height:22px;display:inline-block;margin-right:8px}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{position:relative}
+    .step .num{position:absolute;top:-12px;left:-12px;background:var(--brand-2);color:#0b1020;border-radius:999px;padding:6px 10px;font-weight:800;border:2px solid #0b1020}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price{font-size:36px;font-weight:800;margin:10px 0}
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+    input,textarea,select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:#0c1330;color:var(--text);outline:none}
+    label{font-size:14px;color:var(--muted)}
+    form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    footer{padding:30px 0;color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);font-size:12px}
+    .note{font-size:12px;color:var(--muted)}
+    @media (max-width:980px){.hero-grid,.contact{grid-template-columns:1fr} .grid-3,.process,.pricing{grid-template-columns:1fr} h1{font-size:34px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <span class="logo-mark" aria-hidden="true">🔷</span>
+        <span>IRA Consulting</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#pilot">Pilot</a>
+        <a href="#contact" class="btn brand">Apply to Pilot (£499)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Hybrid UK ↔ India • Operations • AI • Sustainability</span>
+          <h1>Stuck in growth chaos? <br/>We bring structure, speed & clarity—in <span style="background:linear-gradient(135deg,var(--brand-2),var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent">3 weeks</span>.</h1>
+          <p class="lead">IRA helps startups & SMEs fix bottlenecks, expand to India, adopt AI, and embed sustainability. <strong>Explore. Explain. Learn. Repeat.</strong></p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="#pilot" class="btn brand">Join Pilot Cohort (£499)</a>
+            <a href="#contact" class="btn">Book a Discovery Call</a>
+          </div>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <span class="pill">⏱️ 3-week sprint</span>
+            <span class="pill">🧭 Ops audit + AI training</span>
+            <span class="pill">🌍 India expansion advisory</span>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h3>What you get in the pilot</h3>
+          <div class="list">
+            <div class="row"><span class="dot"></span><div>Week 1: Exploration & diagnostic assessment</div></div>
+            <div class="row"><span class="dot"></span><div>Week 2: Bottleneck Report + workflow map</div></div>
+            <div class="row"><span class="dot"></span><div>Week 3: Strategy deck + AI‑readiness workshop</div></div>
+            <div class="row"><span class="dot"></span><div>+30 days: impact check‑in & next‑steps</div></div>
+          </div>
+          <p class="note">Perfect for early‑stage startups, training agencies, and SMEs needing clarity fast.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="muted">End‑to‑end advisory that actually implements.</p>
+        <div class="grid-3" style="margin-top:18px">
+          <div class="card">
+            <h3>Operational Audit & Bottlenecks</h3>
+            <p>Lean + data-driven analysis across your value chain—from sourcing to sales. Get a concise action plan with priority matrix.</p>
+          </div>
+          <div class="card">
+            <h3>India Expansion & Market Entry</h3>
+            <p>UK HQ, India delivery. Site selection, licensing, vendors, and post‑launch compliance. Ground‑zero to go‑live.</p>
+          </div>
+          <div class="card">
+            <h3>Sustainability & ESG</h3>
+            <p>Energy audits, renewables roadmap (solar, rainwater harvesting), and ESG reporting templates.</p>
+          </div>
+          <div class="card">
+            <h3>AI & Workforce Upskilling</h3>
+            <p>Custom training on GenAI, prompt engineering, and automation. Department‑specific use‑cases.</p>
+          </div>
+          <div class="card">
+            <h3>Expert Collaboration</h3>
+            <p>Bridge to domain specialists, universities and labs for niche problems. Neutral, no‑commission model.</p>
+          </div>
+          <div class="card">
+            <h3>Custom Requests</h3>
+            <p>We’ll scope special projects — strategy sprints, due‑diligence, or policy‑aligned initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <h2>Our Process: Explore → Explain → Learn → Repeat</h2>
+        <p class="muted">Simple loop. Compounding results.</p>
+        <div class="process" style="margin-top:18px">
+          <div class="card step"><span class="num">1</span><h3>Explore</h3><p>Discovery, interviews, data capture, on‑ground context.</p></div>
+          <div class="card step"><span class="num">2</span><h3>Explain</h3><p>Audit findings, bottleneck maps, clear recommendations.</p></div>
+          <div class="card step"><span class="num">3</span><h3>Learn</h3><p>AI workshops + SOPs; teams acquire new capabilities.</p></div>
+          <div class="card step"><span class="num">4</span><h3>Repeat</h3><p>30‑day impact review; iterate the roadmap.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pilot">
+      <div class="container">
+        <h2>Pilot Cohort (£499)</h2>
+        <p class="muted">Limited slots each month. Designed for speed and clarity.</p>
+        <div class="pricing" style="margin-top:18px">
+          <div class="card">
+            <h3>What’s included</h3>
+            <ul>
+              <li>3‑week sprint with fixed scope</li>
+              <li>Exploration summary (PDF)</li>
+              <li>Bottleneck report (PDF)</li>
+              <li>Strategy + AI deck (PPT/PDF)</li>
+              <li>+30 day impact session</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Ideal for</h3>
+            <ul>
+              <li>Early‑stage startups</li>
+              <li>Training / skilling agencies</li>
+              <li>SMEs with process drift</li>
+              <li>Teams new to AI workflows</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Outcome</h3>
+            <ul>
+              <li>Clarity on priorities</li>
+              <li>Immediate process wins</li>
+              <li>AI use‑case shortlist</li>
+              <li>Roadmap for 90 days</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:18px"><a href="#contact" class="btn brand">Apply Now</a></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact">
+        <div>
+          <h2>Apply to the Pilot / Book a Call</h2>
+          <p class="muted">Tell us where you’re stuck — ops, hiring, expansion, or AI. We’ll respond within 24 hours.</p>
+          <form id="lead-form" autocomplete="on">
+            <div class="row">
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" name="name" placeholder="e.g., Aisha Khan" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="founder@startup.com" required />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="company">Company</label>
+                <input id="company" name="company" placeholder="Startup / SME name" />
+              </div>
+              <div>
+                <label for="interest">What do you need?</label>
+                <select id="interest" name="interest">
+                  <option>Operational audit</option>
+                  <option>India expansion</option>
+                  <option>AI training & adoption</option>
+                  <option>Sustainability / ESG</option>
+                  <option>Custom request</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="message">Where are you stuck?</label>
+              <textarea id="message" name="message" rows="5" placeholder="Briefly describe your bottlenecks or goals"></textarea>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
+              <button class="btn brand" type="submit">Submit Enquiry</button>
+              <a class="btn" id="whatsapp-link" href="#">Chat on WhatsApp</a>
+            </div>
+            <p id="form-status" class="note" style="margin-top:10px"></p>
+          </form>
+        </div>
+        <aside>
+          <div class="card">
+            <h3>Company</h3>
+            <p>IRA Consulting Ltd (UK) • IRA Advisory Pvt Ltd (India)</p>
+            <p class="muted">Lancashire / London • Hyderabad</p>
+            <p class="muted">Email: <a href="mailto:hello@iraconsulting.co">hello@iraconsulting.co</a></p>
+            <div style="height:1px;background:rgba(255,255,255,.08);margin:14px 0"></div>
+            <h3>Why IRA?</h3>
+            <ul>
+              <li>Hybrid UK ↔ India execution</li>
+              <li>Audit → Implementation → Training</li>
+              <li>Affordable, outcome‑driven pilots</li>
+              <li>No financial advisory — neutral options only</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div>© <span id="y"></span> IRA Consulting. All rights reserved.</div>
+      <div class="note">Built for validation. v0.1</div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Simple form handler: mailto + WhatsApp fallback
+    const form = document.getElementById('lead-form');
+    const status = document.getElementById('form-status');
+    const wa = document.getElementById('whatsapp-link');
+
+    // TODO: replace with your number in international format, e.g. +4477...
+    const WHATSAPP_NUMBER = "+447700000000";
+
+    function buildSummary(data){
+      return `IRA Pilot/Enquiry\nName: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\nInterest: ${data.interest}\nMessage: ${data.message}`;
+    }
+
+    wa.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const msg = encodeURIComponent(buildSummary(data));
+      const url = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g,'')}?text=${msg}`;
+      window.open(url,'_blank');
+    })
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const body = encodeURIComponent(buildSummary(data));
+      const mail = `mailto:hello@iraconsulting.co?subject=${encodeURIComponent('IRA Enquiry: '+(data.company||''))}&body=${body}`;
+      window.location.href = mail;
+      status.textContent = 'Opening your email client… If nothing happens, write to hello@iraconsulting.co';
+    })
+  </script>
+</body>
+</html>
